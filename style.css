@@ -474,3 +474,7 @@ body::before {
     padding-top: 0;
   }
 }
+ .section-index {
+    padding-top: 0;
+  }
+}
