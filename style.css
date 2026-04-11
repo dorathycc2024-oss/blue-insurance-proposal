@@ -14,6 +14,7 @@
   --radius: 30px;
   --max: 1320px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -72,6 +73,7 @@ body {
   height: 82px;
   width: auto;
 }
+
 .topnav {
   display: flex;
   gap: 18px;
@@ -84,7 +86,6 @@ body {
   font-size: 0.94rem;
   transition: color 180ms ease;
 }
-
 .topnav a:hover {
   color: var(--accent-dark-green);
 }
@@ -101,6 +102,7 @@ body {
   padding: clamp(76px, 10vw, 146px);
   min-height: 84vh;
 }
+
 .hero-inner {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.68fr);
@@ -142,7 +144,6 @@ body {
 .persona-label {
   color: var(--accent-green);
 }
-
 .proposal-kicker,
 .recommendation-kicker {
   color: var(--accent-dark-green);
@@ -234,6 +235,7 @@ body {
   align-items: start;
   margin-bottom: 32px;
 }
+
 .section-heading.high-impact-heading {
   margin-bottom: 38px;
 }
@@ -362,30 +364,28 @@ body {
 }
 
 .benchmark-image-frame {
-  height: 260px;
+  height: 340px;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
-  background: #eef3ea;
+  background: #f7faf5;
   position: relative;
+  padding: 18px 18px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .benchmark-image {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
 }
-
-.benchmark-image-vivian {
-  object-position: center top;
-}
-.benchmark-image-tori {
-  object-position: center top;
-}
-
+.benchmark-image-vivian,
+.benchmark-image-tori,
 .benchmark-image-katie {
-  object-position: center top;
+  object-position: top center;
 }
 
 .benchmark-body {
@@ -411,7 +411,6 @@ body {
   border-bottom: 1px solid rgba(93, 138, 104, 0.28);
   padding-bottom: 2px;
 }
-
 .benchmark-link:hover {
   color: var(--accent-dark-green);
 }
@@ -454,8 +453,9 @@ body {
 .persona-card-top {
   margin-bottom: 18px;
 }
+
 .persona-copy-stack {
-  display: grid;
+    display: grid;
   gap: 16px;
 }
 
@@ -483,6 +483,7 @@ body {
 .recommendation-panel {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.12), rgba(255,255,255,0.96));
 }
+
 .recommendation-panel h3 {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -499,7 +500,6 @@ body {
   margin: 10px 0 0;
   color: var(--muted);
 }
-
 /* Roadmap */
 .roadmap-system {
   display: grid;
@@ -588,7 +588,6 @@ body {
   text-overflow: ellipsis;
   box-shadow: var(--shadow-soft);
 }
-
 .foundation-bar {
   background: linear-gradient(135deg, #6d8f72 0%, #3f6047 100%);
 }
@@ -616,6 +615,7 @@ body {
   display: grid;
   gap: 10px;
 }
+
 /* Pricing */
 .pricing-panel {
   display: grid;
@@ -722,29 +722,3 @@ body {
   .topnav {
     gap: 12px;
   }
-
-  .topnav a {
-    font-size: 0.88rem;
-  }
-
-  .brand-logo {
-    height: 62px;
-  }
-
-  .hero,
-  .section {
-    border-radius: 24px;
-  }
-  .section-heading {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .section-index {
-    padding-top: 0;
-  }
-
-  .benchmark-image-frame {
-    height: 220px;
-  }
-}
