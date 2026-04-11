@@ -1,6 +1,48 @@
-Friday-💻
-APP
- — 12:45 AM
+:root {
+  --bg: #f6f8f4;
+  --bg-2: #edf3ea;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-strong: rgba(255, 255, 255, 0.97);
+  --text: #171d19;
+  --muted: #69756b;
+  --line: rgba(23, 29, 25, 0.1);
+  --accent-green: #5d8a68;
+  --accent-dark-green: #31553b;
+  --accent-soft: rgba(93, 138, 104, 0.12);
+  --cover-accent: rgba(93, 138, 104, 0.16);
+  --shadow: 0 28px 90px rgba(23, 30, 25, 0.08);
+  --shadow-soft: 0 16px 40px rgba(23, 30, 25, 0.06);
+  --radius: 30px;
+  --max: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(93, 138, 104, 0.08), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  line-height: 1.6;
+}
+
+.page-aura {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.14;
 }
 
 .site-shell {
@@ -331,30 +373,32 @@ APP
 
 .framing-grid,
 .benchmark-grid,
-.why-grid,
 .persona-card-grid,
 .roadmap-grid,
-.deliverables-three-grid,
+.deliverables-four-grid,
 .why-gt-grid {
   display: grid;
   gap: 18px;
 }
+
 .framing-grid {
   grid-template-columns: 1.08fr 1fr 1fr;
 }
 
 .benchmark-grid,
-.persona-card-grid,
-.deliverables-three-grid {
+.persona-card-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.why-grid {
+.why-grid-balanced {
+  display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .roadmap-grid,
-.why-gt-grid {
+.why-gt-grid,
+.deliverables-four-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
@@ -406,15 +450,18 @@ APP
   border: 1px solid rgba(93, 138, 104, 0.14);
 }
 
-.deliverables-framing-strip {
-  margin-bottom: 22px;
+.deliverables-top-statement {
+  margin-top: 14px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(93, 138, 104, 0.08);
+  border: 1px solid rgba(93, 138, 104, 0.14);
 }
 
-.deliverables-framing-strip p {
+.deliverables-top-statement p {
   margin: 0;
   color: var(--text);
   font-weight: 600;
-  max-width: 760px;
 }
 
 .quote-card {
@@ -427,6 +474,7 @@ APP
   line-height: 1.35;
   font-weight: 600;
 }
+
 /* Benchmark */
 .benchmark-card {
   overflow: hidden;
@@ -457,6 +505,7 @@ APP
   color: var(--muted);
   font-size: 0.95rem;
 }
+
 .benchmark-followers {
   margin: 8px 0 0;
   font-size: 0.94rem;
@@ -496,7 +545,6 @@ APP
   justify-content: flex-start;
   min-height: 100%;
 }
-
 .persona-portrait-frame {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -527,7 +575,6 @@ APP
 .persona-copy-stack p {
   margin: 8px 0 0;
 }
-
 .standout-card {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.1), rgba(255,255,255,0.96));
   box-shadow: 0 16px 44px rgba(49, 85, 59, 0.1);
@@ -560,6 +607,7 @@ APP
   display: flex;
   flex-direction: column;
 }
+
 .deliverable-group {
   display: grid;
   gap: 14px;
@@ -571,12 +619,6 @@ APP
   color: var(--muted);
   display: grid;
   gap: 10px;
-}
-
-.deliverable-divider {
-  height: 1px;
-  background: var(--line);
-  margin: 24px 0;
 }
 
 /* Roadmap */
@@ -592,7 +634,6 @@ APP
 .roadmap-chart-header {
   margin-bottom: 20px;
 }
-
 .roadmap-chart-grid {
   display: grid;
   grid-template-columns: 220px repeat(12, minmax(0, 1fr));
@@ -604,6 +645,7 @@ APP
 .roadmap-corner {
   min-height: 42px;
 }
+
 .roadmap-month {
   min-height: 42px;
   display: flex;
@@ -618,6 +660,7 @@ APP
   border-radius: 14px;
   background: rgba(255,255,255,0.86);
 }
+
 .roadmap-phase-label {
   min-height: 54px;
   display: flex;
@@ -648,6 +691,7 @@ APP
   height: 1px;
   background: rgba(93, 138, 104, 0.12);
 }
+
 .roadmap-bar {
   grid-column: var(--start) / span var(--span);
   min-height: 42px;
@@ -677,6 +721,7 @@ APP
 .relevance-bar {
   background: linear-gradient(135deg, #91a97e 0%, #617450 100%);
 }
+
 .scale-bar {
   background: linear-gradient(135deg, #6e8a73 0%, #355042 100%);
 }
@@ -692,7 +737,6 @@ APP
   display: grid;
   gap: 10px;
 }
-
 /* Pricing */
 .pricing-panel {
   padding: 30px;
@@ -705,6 +749,7 @@ APP
   gap: 18px;
   align-items: start;
 }
+
 .pricing-main h3 {
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   margin-top: 8px;
@@ -720,6 +765,7 @@ APP
   display: grid;
   gap: 12px;
 }
+
 .pricing-side p {
   margin: 0;
   color: var(--muted);
@@ -751,7 +797,6 @@ APP
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.1), rgba(255,255,255,0.96));
   border: 1px solid rgba(93, 138, 104, 0.16);
 }
-
 .pricing-value-card p {
   margin: 0;
   color: var(--text);
@@ -793,15 +838,16 @@ APP
     grid-template-columns: 180px repeat(12, minmax(0, 1fr));
   }
 }
+
 @media (max-width: 1180px) {
   .proposal-cover-meta,
   .hero-inner,
   .framing-grid,
   .benchmark-grid,
   .persona-card-grid,
-  .deliverables-three-grid,
+  .deliverables-four-grid,
   .pricing-panel-refined,
-  .why-grid,
+  .why-grid-balanced,
   .why-gt-grid {
     grid-template-columns: 1fr;
   }
@@ -822,6 +868,7 @@ APP
   .roadmap-grid {
     grid-template-columns: 1fr;
   }
+
   .hero {
     min-height: auto;
   }
@@ -839,7 +886,6 @@ APP
   .topnav {
     gap: 12px;
   }
-
   .topnav a {
     font-size: 0.88rem;
   }
@@ -853,7 +899,6 @@ APP
   .section {
     border-radius: 24px;
   }
-
   .section-heading {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -866,6 +911,7 @@ APP
   .proposal-cover-inner {
     gap: 28px;
   }
+
   .proposal-cover-main h1 {
     font-size: clamp(2.4rem, 12vw, 4.2rem);
   }
