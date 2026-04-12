@@ -113,7 +113,6 @@ body {
 .hero-heading-block {
   max-width: 980px;
 }
-
 .hero h1 {
   margin: 0;
   max-width: 1080px;
@@ -128,7 +127,6 @@ body {
   font-size: clamp(1.05rem, 2vw, 1.22rem);
   color: var(--muted);
 }
-
 .hero-core-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
@@ -187,7 +185,6 @@ body {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.08);
 }
-
 .hero-unlock-item h3 {
   margin: 0 0 10px;
   font-size: 1rem;
@@ -202,7 +199,6 @@ body {
   line-height: 1.65;
   color: rgba(229, 238, 232, 0.84);
 }
-
 .hero-brief-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -515,7 +511,6 @@ body {
   max-width: 860px;
   margin-bottom: 24px;
 }
-
 .large-tags {
   display: flex;
   gap: 10px;
@@ -530,7 +525,6 @@ body {
   background: rgba(93, 138, 104, 0.08);
   font-size: 0.94rem;
 }
-
 .premium-message {
   padding: 30px 34px;
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.94));
@@ -606,6 +600,7 @@ body {
   font-size: 0.98rem;
   line-height: 1.5;
 }
+
 .persona-posts ul,
 .preview-why-card ul {
   margin: 0;
@@ -633,7 +628,6 @@ body {
 .standout-persona {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.82));
 }
-
 .standout-card {
   box-shadow: 0 14px 40px rgba(49, 85, 59, 0.08);
 }
@@ -724,6 +718,7 @@ body {
   background: #fff;
   padding: 0;
 }
+
 .ig-card__top {
   display: flex;
   justify-content: space-between;
@@ -750,7 +745,6 @@ body {
   font-size: 0.8rem;
   color: var(--muted);
 }
-
 .ig-card__avatar {
   width: 34px;
   height: 34px;
@@ -809,7 +803,6 @@ body {
   gap: 14px;
   margin-bottom: 20px;
 }
-
 .preview-profile-card__avatar {
   width: 62px;
   height: 62px;
@@ -838,7 +831,6 @@ body {
   font-size: 1.35rem;
   margin-bottom: 6px;
 }
-
 .preview-stats span {
   font-size: 0.82rem;
   color: var(--muted);
@@ -898,9 +890,11 @@ body {
 .compact-stat-card {
   grid-column: auto;
 }
+
 .stat-card {
   position: relative;
   overflow: hidden;
+  min-height: 240px;
 }
 
 .stat-card::before {
@@ -910,19 +904,28 @@ body {
   background: linear-gradient(135deg, rgba(255,255,255,0.22), transparent 48%);
   pointer-events: none;
 }
+.featured-market-card,
+.blue-momentum-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.1));
+}
 
-.stat-card-xl,
-.blue-highlight-card {
-  background: linear-gradient(180deg, rgba(93, 138, 104, 0.13), rgba(255,255,255,0.97));
+.compact-stat-card {
+  background: rgba(255,255,255,0.96);
 }
 
 .stat-value {
   margin-top: 16px;
-  font-size: clamp(2.6rem, 4.6vw, 5rem);
+  font-size: clamp(2.1rem, 3.8vw, 4.2rem);
   line-height: 0.95;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.05em;
   color: var(--text);
   font-weight: 800;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.featured-market-card .stat-value {
+  font-size: clamp(1.9rem, 3.4vw, 3.8rem);
 }
 
 .stat-unit {
@@ -930,20 +933,19 @@ body {
   letter-spacing: -0.02em;
   font-weight: 700;
 }
-
 .stat-caption {
   margin-top: 14px;
   color: var(--text);
   font-weight: 600;
-  line-height: 1.45;
+  line-height: 1.42;
+  font-size: 0.98rem;
 }
 
 .stat-source {
   margin-top: 10px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
-
 .stats-bullets {
   margin: 12px 0 0;
   padding-left: 20px;
@@ -958,15 +960,14 @@ body {
   grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
   margin-bottom: 18px;
 }
-
 .what-data-suggests-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.06));
 }
 
 .what-data-suggests-card p {
   max-width: 900px;
-  font-size: 1.02rem;
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.72;
 }
 
 .elevated-quote-card {
@@ -974,11 +975,10 @@ body {
   display: flex;
   align-items: center;
 }
-
 .elevated-quote-card p {
   color: rgba(255,255,255,0.95);
-  font-size: clamp(1.12rem, 1.8vw, 1.4rem);
-  line-height: 1.5;
+  font-size: clamp(1.08rem, 1.7vw, 1.32rem);
+  line-height: 1.48;
 }
 
 .refined-reference-note {
@@ -986,10 +986,9 @@ body {
 }
 
 .reference-line {
-  font-size: 0.96rem;
-  line-height: 1.7;
+  font-size: 0.94rem;
+  line-height: 1.65;
 }
-
 .delivery-strategy-grid {
   margin-bottom: 20px;
 }
@@ -1019,7 +1018,6 @@ body {
 .roadmap-card {
   min-height: 230px;
 }
-
 .roadmap-phase {
   margin-bottom: 12px;
 }
@@ -1046,6 +1044,7 @@ body {
   color: var(--muted);
   line-height: 1.75;
 }
+
 .governance-principle-card p,
 .measurement-recommendation-card p {
   margin: 10px 0 0;
@@ -1061,6 +1060,7 @@ body {
 .governance-item {
   background: linear-gradient(180deg, rgba(232, 244, 236, 0.9), rgba(255,255,255,0.96));
 }
+
 .governance-item h4,
 .measurement-card h4 {
   margin: 0 0 10px;
@@ -1075,6 +1075,7 @@ body {
   color: var(--muted);
   line-height: 1.75;
 }
+
 .measurement-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -1091,7 +1092,6 @@ body {
 .delivery-pricing-row .pricing-card {
   max-width: none;
 }
-
 .pricing-hero.pricing-hero--wide {
   padding: 30px 34px;
   background: linear-gradient(135deg, #18211f 0%, #24332d 100%);
@@ -1103,6 +1103,7 @@ body {
 .pricing-hero--wide .benchmark-tag {
   color: rgba(214, 231, 220, 0.9);
 }
+
 .pricing-hero__content {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
@@ -1150,7 +1151,6 @@ body {
   grid-template-columns: 1fr;
   gap: 18px;
 }
-
 .next-phase-card {
   display: grid;
   grid-template-columns: 80px minmax(0, 1fr);
@@ -1164,7 +1164,6 @@ body {
   margin: 0;
   padding-top: 6px;
 }
-
 .next-phase-card h3 {
   margin: 0 0 10px;
 }
@@ -1180,7 +1179,6 @@ body {
   transform: translateY(18px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
@@ -1209,7 +1207,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-
   .persona-feel {
     text-align: left;
   }
@@ -1240,7 +1237,6 @@ body {
     text-align: left;
     max-width: none;
   }
-
   .next-phase-card {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1255,7 +1251,6 @@ body {
   .site-shell {
     width: min(calc(100% - 24px), var(--max));
   }
-
   .topnav {
     gap: 12px;
   }
@@ -1267,6 +1262,7 @@ body {
   .brand-logo {
     height: 62px;
   }
+
   .hero,
   .section,
   .persona {
@@ -1281,6 +1277,7 @@ body {
   .section-index {
     padding-top: 0;
   }
+
   .hero-copy {
     font-size: 1rem;
   }
