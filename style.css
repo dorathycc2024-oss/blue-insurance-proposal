@@ -10,6 +10,7 @@
   --accent-dark-green: #31553b;
   --accent-soft: rgba(93, 138, 104, 0.12);
   --shadow: 0 28px 90px rgba(23, 30, 25, 0.08);
+  --shadow-strong: 0 26px 80px rgba(20, 27, 22, 0.18);
   --radius: 30px;
   --max: 1320px;
 }
@@ -31,6 +32,7 @@ body {
     linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
   line-height: 1.6;
 }
+
 .page-aura {
   position: fixed;
   inset: 0;
@@ -60,6 +62,7 @@ body {
   z-index: 20;
   backdrop-filter: blur(18px);
 }
+
 .brand-mark {
   display: inline-flex;
   align-items: center;
@@ -88,6 +91,7 @@ body {
 .topnav a:hover {
   color: var(--accent-dark-green);
 }
+
 .hero,
 .section,
 .persona {
@@ -96,7 +100,6 @@ body {
   box-shadow: var(--shadow);
   border-radius: calc(var(--radius) + 4px);
 }
-
 .hero {
   padding: clamp(76px, 10vw, 146px);
   min-height: 84vh;
@@ -140,7 +143,6 @@ body {
 .hero-side-label {
   color: var(--accent-green);
 }
-
 .proposal-kicker,
 .recommendation-kicker {
   color: var(--accent-dark-green);
@@ -156,7 +158,6 @@ body {
 .recommendation-kicker {
   display: inline-block;
 }
-
 .eyebrow {
   margin-bottom: 14px;
 }
@@ -186,7 +187,6 @@ body {
   flex-wrap: wrap;
   gap: 14px;
 }
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -201,7 +201,6 @@ body {
 .button:hover {
   transform: translateY(-1px);
 }
-
 .button.primary {
   background: var(--text);
   color: #fff;
@@ -223,6 +222,7 @@ body {
   padding: clamp(34px, 4vw, 52px);
   margin-top: 24px;
 }
+
 .section-heading {
   display: grid;
   grid-template-columns: 64px minmax(0, 1fr);
@@ -230,7 +230,6 @@ body {
   align-items: start;
   margin-bottom: 32px;
 }
-
 .section-heading.strong-break,
 .section-heading.high-impact-heading {
   margin-bottom: 38px;
@@ -249,7 +248,8 @@ body {
 .persona-posts h4,
 .preview-profile-card__header h3,
 .preview-why-card h3,
-.next-phase-card h3 {
+.next-phase-card h3,
+.pricing-hero__main h3 {
   margin: 0;
   font-size: clamp(1.9rem, 2.6vw, 3rem);
   letter-spacing: -0.035em;
@@ -259,7 +259,6 @@ body {
   font-size: 1.05rem;
   margin-bottom: 12px;
 }
-
 .preview-profile-card__header h3 {
   font-size: 1.3rem;
 }
@@ -293,7 +292,6 @@ body {
 .detail-grid,
 .benchmark-grid,
 .roadmap-grid,
-.reference-thumbs,
 .platform-logic-grid,
 .methodology-grid,
 .statistics-hero-grid,
@@ -311,6 +309,7 @@ body {
 .argument-grid {
   grid-template-columns: 1.1fr 1fr 1fr;
 }
+
 .research-grid {
   margin-top: 18px;
 }
@@ -355,6 +354,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 26px;
 }
+
 .content-card,
 .pillar-card,
 .persona-details,
@@ -400,13 +400,13 @@ body {
 .editorial-quote {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.94));
 }
+
 .editorial-quote p {
   color: var(--text);
   font-size: 1.2rem;
   line-height: 1.35;
   font-weight: 600;
 }
-
 .reframing-highlight {
   padding: 28px;
 }
@@ -443,6 +443,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .persona::after {
   content: '';
   position: absolute;
@@ -450,7 +451,6 @@ body {
   background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 42%);
   pointer-events: none;
 }
-
 .persona-intro {
   display: flex;
   justify-content: space-between;
@@ -458,6 +458,7 @@ body {
   align-items: end;
   margin-bottom: 24px;
 }
+
 .persona-feel {
   max-width: 420px;
   text-align: right;
@@ -480,7 +481,6 @@ body {
   aspect-ratio: 4 / 5;
   object-fit: cover;
 }
-
 .persona-content-stack {
   display: grid;
   gap: 18px;
@@ -494,7 +494,6 @@ body {
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
 }
-
 .detail-grid span {
   display: block;
   font-size: 0.8rem;
@@ -532,6 +531,7 @@ body {
   border: 1px solid rgba(93, 138, 104, 0.18);
   margin-bottom: 22px;
 }
+
 .standout-persona {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.82));
 }
@@ -539,7 +539,6 @@ body {
 .standout-card {
   box-shadow: 0 14px 40px rgba(49, 85, 59, 0.08);
 }
-
 .benchmark-grid.curated-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -590,6 +589,7 @@ body {
 .benchmark-link:hover {
   color: var(--accent-dark-green);
 }
+
 .recommendation-conclusion .recommendation-panel {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.12), rgba(255,255,255,0.96));
 }
@@ -598,7 +598,6 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 .platform-logic-grid .platform-card,
 .methodology-grid .pillar-card,
 .gt-grid .pillar-card,
@@ -634,6 +633,7 @@ body {
   padding: 14px 16px;
   background: #fff;
 }
+
 .ig-card__profile {
   display: flex;
   gap: 10px;
@@ -648,6 +648,7 @@ body {
 .ig-card__profile strong {
   font-size: 0.92rem;
 }
+
 .ig-card__profile span {
   font-size: 0.8rem;
   color: var(--muted);
@@ -670,13 +671,13 @@ body {
   overflow: hidden;
   background: #eef3ee;
 }
-
 .ig-card__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
+
 .ig-card__meta {
   padding: 12px 16px 6px;
   font-size: 1rem;
@@ -692,13 +693,13 @@ body {
   color: var(--text);
   line-height: 1.55;
 }
+
 .ig-card__caption span {
   display: inline-block;
   margin-top: 10px;
   font-size: 0.86rem;
   color: var(--muted);
 }
-
 .social-preview-right {
   display: grid;
   gap: 18px;
@@ -758,7 +759,6 @@ body {
     radial-gradient(circle at top right, rgba(93, 138, 104, 0.13), transparent 30%),
     linear-gradient(180deg, rgba(255,255,255,0.92), rgba(236, 244, 234, 0.94));
 }
-
 .upgraded-statistics-hero-grid {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   margin-bottom: 20px;
@@ -796,6 +796,7 @@ body {
   grid-column: span 6;
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.1));
 }
+
 .blue-momentum-card {
   grid-column: span 6;
 }
@@ -809,6 +810,7 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 .stat-card::before {
   content: '';
   position: absolute;
@@ -816,7 +818,6 @@ body {
   background: linear-gradient(135deg, rgba(255,255,255,0.22), transparent 48%);
   pointer-events: none;
 }
-
 .stat-card-xl,
 .blue-highlight-card {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.13), rgba(255,255,255,0.97));
@@ -868,6 +869,7 @@ body {
 .what-data-suggests-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.06));
 }
+
 .what-data-suggests-card p {
   max-width: 900px;
   font-size: 1.02rem;
@@ -898,6 +900,7 @@ body {
 .delivery-strategy-grid {
   margin-bottom: 20px;
 }
+
 .deliverable-detail-list {
   display: grid;
   gap: 14px;
@@ -919,7 +922,6 @@ body {
 .roadmap-header {
   margin-bottom: 18px;
 }
-
 .roadmap-card {
   min-height: 230px;
 }
@@ -927,22 +929,66 @@ body {
 .roadmap-phase {
   margin-bottom: 12px;
 }
+
 .delivery-pricing-row {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
 .delivery-pricing-row .pricing-card {
-  max-width: 420px;
+  max-width: none;
+}
+.pricing-hero.pricing-hero--wide {
+  padding: 30px 34px;
+  background: linear-gradient(135deg, #1f2a28 0%, #2d4038 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255,255,255,0.96);
+  box-shadow: var(--shadow-strong);
 }
 
-.pricing-hero {
-  background: linear-gradient(180deg, rgba(93, 138, 104, 0.12), rgba(255,255,255,0.96));
+.pricing-hero--wide .benchmark-tag {
+  color: rgba(214, 231, 220, 0.9);
 }
 
-.price-subline {
-  font-size: 1.05rem;
-  color: var(--text);
+.pricing-hero__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
+  gap: 20px;
+  align-items: end;
+  margin-top: 12px;
+}
+
+.pricing-hero__main h3 {
+  font-size: clamp(2.4rem, 4.2vw, 4.6rem);
+  line-height: 0.95;
+  color: #fff;
+}
+
+.pricing-hero__main h3 span {
+  font-size: 0.34em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  opacity: 0.92;
+}
+
+.pricing-hero__main .price-subline {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.9);
   font-weight: 600;
+}
+
+.pricing-hero__side {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.pricing-hero__side p {
+  margin: 0;
+  max-width: 260px;
+  color: rgba(232, 240, 235, 0.8);
+  line-height: 1.65;
+  text-align: right;
 }
 
 .next-phase-stack {
@@ -950,7 +996,6 @@ body {
   grid-template-columns: 1fr;
   gap: 18px;
 }
-
 .next-phase-card {
   display: grid;
   grid-template-columns: 80px minmax(0, 1fr);
@@ -964,7 +1009,6 @@ body {
   margin: 0;
   padding-top: 6px;
 }
-
 .next-phase-card h3 {
   margin: 0 0 10px;
 }
@@ -980,11 +1024,11 @@ body {
   transform: translateY(18px);
   transition: opacity 700ms ease, transform 700ms ease;
 }
-
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
 @media (max-width: 1180px) {
   .hero-grid,
   .argument-grid,
@@ -1000,6 +1044,7 @@ body {
   .upgraded-statistics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
   .featured-market-card,
   .blue-momentum-card,
   .compact-stat-card {
@@ -1013,6 +1058,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .persona-feel {
     text-align: left;
   }
@@ -1037,11 +1083,19 @@ body {
   .stat-value {
     font-size: clamp(2.2rem, 9vw, 3.8rem);
   }
-
-  .delivery-pricing-row .pricing-card {
-    max-width: none;
+  .pricing-hero__content {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
+  .pricing-hero__side {
+    justify-content: flex-start;
+  }
+
+  .pricing-hero__side p {
+    text-align: left;
+    max-width: none;
+  }
   .next-phase-card {
     grid-template-columns: 1fr;
     gap: 10px;
@@ -1056,7 +1110,6 @@ body {
   .site-shell {
     width: min(calc(100% - 24px), var(--max));
   }
-
   .topnav {
     gap: 12px;
   }
