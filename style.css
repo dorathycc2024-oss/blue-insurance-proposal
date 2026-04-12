@@ -1,6 +1,38 @@
-Friday-💻
-APP
- — 9:17 PM
+:root {
+  --bg: #f6f8f4;
+  --bg-2: #edf3ea;
+  --surface: rgba(255, 255, 255, 0.86);
+  --surface-strong: rgba(255, 255, 255, 0.97);
+  --text: #171d19;
+  --muted: #69756b;
+  --line: rgba(23, 29, 25, 0.1);
+  --accent-green: #5d8a68;
+  --accent-dark-green: #31553b;
+  --accent-soft: rgba(93, 138, 104, 0.12);
+  --cover-accent: rgba(93, 138, 104, 0.16);
+  --shadow: 0 28px 90px rgba(23, 30, 25, 0.08);
+  --shadow-soft: 0 16px 40px rgba(23, 30, 25, 0.06);
+  --radius: 30px;
+  --max: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(93, 138, 104, 0.08), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  line-height: 1.6;
+}
+
   position: relative;
 }
 
