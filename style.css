@@ -14,6 +14,7 @@
   --radius: 30px;
   --max: 1320px;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -42,6 +43,7 @@ body {
   background-size: 40px 40px;
   opacity: 0.14;
 }
+
 .site-shell {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
@@ -72,6 +74,7 @@ body {
   height: 82px;
   width: auto;
 }
+
 .topnav {
   display: flex;
   gap: 18px;
@@ -97,7 +100,6 @@ body {
   box-shadow: var(--shadow);
   border-radius: calc(var(--radius) + 4px);
 }
-
 .hero {
   padding: clamp(64px, 8vw, 110px);
   min-height: auto;
@@ -145,6 +147,7 @@ body {
   padding: 28px;
   background: rgba(255, 255, 255, 0.94);
 }
+
 .hero-summary-card p {
   margin: 0;
   color: var(--muted);
@@ -171,7 +174,6 @@ body {
   color: rgba(241, 247, 243, 0.9);
   line-height: 1.75;
 }
-
 .hero-unlocks-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -225,13 +227,6 @@ body {
   line-height: 1.7;
 }
 
-.hero-actions {
-  margin-top: 38px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
 .hero-side-label,
 .eyebrow,
 .persona-label,
@@ -280,6 +275,7 @@ body {
 .proposal-kicker {
   margin-bottom: 20px;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -294,6 +290,7 @@ body {
 .button:hover {
   transform: translateY(-1px);
 }
+
 .button.primary {
   background: var(--text);
   color: #fff;
@@ -323,6 +320,7 @@ body {
   align-items: start;
   margin-bottom: 32px;
 }
+
 .section-heading.strong-break,
 .section-heading.high-impact-heading {
   margin-bottom: 38px;
@@ -342,7 +340,8 @@ body {
 .preview-profile-card__header h3,
 .preview-why-card h3,
 .next-phase-card h3,
-.pricing-hero__main h3 {
+.pricing-hero__main h3,
+.delivery-submodule-header h3 {
   margin: 0;
   font-size: clamp(1.9rem, 2.6vw, 3rem);
   letter-spacing: -0.035em;
@@ -352,12 +351,14 @@ body {
   font-size: 1.05rem;
   margin-bottom: 12px;
 }
+
 .preview-profile-card__header h3 {
   font-size: 1.3rem;
 }
 
 .preview-why-card h3,
-.next-phase-card h3 {
+.next-phase-card h3,
+.delivery-submodule-header h3 {
   font-size: clamp(1.3rem, 2vw, 1.7rem);
 }
 
@@ -369,9 +370,7 @@ body {
 .benchmark-card p,
 .roadmap-card p,
 .section-intro-card p,
-.reference-meta p,
 .editorial-copy p,
-.hero-side-card p,
 .recommendation-panel p,
 .statistics-proof-card p,
 .reference-line {
@@ -394,11 +393,11 @@ body {
 .social-preview-grid,
 .ig-mockups,
 .preview-stats,
-.delivery-strategy-grid {
+.delivery-strategy-grid,
+.measurement-grid {
   display: grid;
   gap: 18px;
 }
-
 .argument-grid {
   grid-template-columns: 1.1fr 1fr 1fr;
 }
@@ -440,7 +439,11 @@ body {
 .preview-profile-card,
 .preview-why-card,
 .next-phase-card,
-.ig-card {
+.ig-card,
+.governance-principle-card,
+.measurement-recommendation-card,
+.governance-item,
+.measurement-card {
   background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 26px;
@@ -466,7 +469,11 @@ body {
 .data-notes,
 .persona-posts,
 .preview-profile-card,
-.preview-why-card {
+.preview-why-card,
+.governance-principle-card,
+.measurement-recommendation-card,
+.governance-item,
+.measurement-card {
   padding: 26px;
 }
 
@@ -480,12 +487,12 @@ body {
   line-height: 1.25;
   letter-spacing: -0.03em;
 }
-
 .split-editorial {
   display: grid;
   grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
   gap: 18px;
 }
+
 .editorial-quote {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.94));
 }
@@ -500,6 +507,7 @@ body {
 .reframing-highlight {
   padding: 28px;
 }
+
 .reframing-main {
   font-size: clamp(1.35rem, 2.5vw, 2.1rem);
   line-height: 1.2;
@@ -513,6 +521,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
 }
+
 .large-tags span {
   border: 1px solid rgba(93, 138, 104, 0.22);
   border-radius: 999px;
@@ -552,11 +561,11 @@ body {
   max-width: 420px;
   text-align: right;
 }
-
 .persona-profile-grid {
   grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
   align-items: start;
 }
+
 .persona-image-card {
   overflow: hidden;
   box-shadow: var(--shadow);
@@ -597,7 +606,6 @@ body {
   font-size: 0.98rem;
   line-height: 1.5;
 }
-
 .persona-posts ul,
 .preview-why-card ul {
   margin: 0;
@@ -656,12 +664,12 @@ body {
 .benchmark-body {
   padding: 24px;
 }
-
 .handle {
   margin-top: -4px;
   color: var(--muted);
   font-size: 0.95rem;
 }
+
 .benchmark-summary {
   font-weight: 600;
   color: var(--text);
@@ -675,6 +683,7 @@ body {
   border-bottom: 1px solid rgba(93, 138, 104, 0.28);
   padding-bottom: 2px;
 }
+
 .benchmark-link:hover {
   color: var(--accent-dark-green);
 }
@@ -715,7 +724,6 @@ body {
   background: #fff;
   padding: 0;
 }
-
 .ig-card__top {
   display: flex;
   justify-content: space-between;
@@ -729,11 +737,11 @@ body {
   gap: 10px;
   align-items: center;
 }
-
 .ig-card__profile div {
   display: flex;
   flex-direction: column;
 }
+
 .ig-card__profile strong {
   font-size: 0.92rem;
 }
@@ -749,6 +757,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .ig-card__menu {
   color: var(--text);
   font-size: 1rem;
@@ -772,7 +781,6 @@ body {
   font-size: 1rem;
   color: var(--text);
 }
-
 .ig-card__caption {
   padding: 0 16px 18px;
 }
@@ -808,6 +816,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .preview-profile-card__header p {
   margin: 6px 0 0;
   color: var(--muted);
@@ -816,7 +825,6 @@ body {
 .preview-stats {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-
 .preview-stats div {
   padding: 16px 14px;
   border-radius: 18px;
@@ -837,6 +845,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+
 .preview-why-card p {
   margin: 0 0 16px;
   color: var(--muted);
@@ -860,7 +869,6 @@ body {
   grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
   margin-bottom: 20px;
 }
-
 .editorial-stat-card {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.14), rgba(255,255,255,0.97));
 }
@@ -875,35 +883,21 @@ body {
   font-size: 1.02rem;
   line-height: 1.78;
 }
-
 .strategic-rationale-card {
   background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(93, 138, 104, 0.06));
 }
 
 .upgraded-statistics-grid {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
   margin-bottom: 20px;
 }
 
-.featured-stat-card {
-  min-height: 280px;
-}
-
-.featured-market-card {
-  grid-column: span 6;
-  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.1));
-}
-
-.blue-momentum-card {
-  grid-column: span 6;
-}
-
+.featured-market-card,
+.blue-momentum-card,
 .compact-stat-card {
-  grid-column: span 4;
-  min-height: 240px;
+  grid-column: auto;
 }
-
 .stat-card {
   position: relative;
   overflow: hidden;
@@ -955,6 +949,7 @@ body {
   padding-left: 20px;
   color: var(--muted);
 }
+
 .stats-bullets li + li {
   margin-top: 10px;
 }
@@ -985,6 +980,7 @@ body {
   font-size: clamp(1.12rem, 1.8vw, 1.4rem);
   line-height: 1.5;
 }
+
 .refined-reference-note {
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(93, 138, 104, 0.04));
 }
@@ -1028,6 +1024,66 @@ body {
   margin-bottom: 12px;
 }
 
+.delivery-submodule {
+  margin-top: 24px;
+}
+
+.delivery-submodule-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.4fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
+.delivery-submodule-header h3 {
+  margin: 10px 0 10px;
+  line-height: 1.15;
+}
+
+.delivery-submodule-header p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.governance-principle-card p,
+.measurement-recommendation-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.governance-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.governance-item {
+  background: linear-gradient(180deg, rgba(232, 244, 236, 0.9), rgba(255,255,255,0.96));
+}
+.governance-item h4,
+.measurement-card h4 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.governance-item p,
+.measurement-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+.measurement-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.measurement-card h4 {
+  font-size: 1.18rem;
+}
+
 .delivery-pricing-row {
   margin-top: 24px;
 }
@@ -1043,10 +1099,10 @@ body {
   color: rgba(255,255,255,0.96);
   box-shadow: var(--shadow-strong);
 }
+
 .pricing-hero--wide .benchmark-tag {
   color: rgba(214, 231, 220, 0.9);
 }
-
 .pricing-hero__content {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.9fr);
@@ -1088,6 +1144,7 @@ body {
   line-height: 1.65;
   text-align: right;
 }
+
 .next-phase-stack {
   display: grid;
   grid-template-columns: 1fr;
@@ -1102,6 +1159,7 @@ body {
   min-height: auto;
   padding: 28px 30px;
 }
+
 .next-phase-card .roadmap-phase {
   margin: 0;
   padding-top: 6px;
@@ -1116,6 +1174,7 @@ body {
   color: var(--muted);
   line-height: 1.75;
 }
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1137,17 +1196,10 @@ body {
   .upgraded-statistics-hero-grid,
   .upgraded-statistics-editorial-grid,
   .persona-profile-grid,
-  .social-preview-grid {
+  .social-preview-grid,
+  .delivery-submodule-header,
+  .measurement-grid {
     grid-template-columns: 1fr;
-  }
-
-  .upgraded-statistics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .featured-market-card,
-  .blue-momentum-card,
-  .compact-stat-card {
-    grid-column: auto;
   }
 }
 
@@ -1173,9 +1225,6 @@ body {
   .preview-stats,
   .delivery-strategy-grid {
     grid-template-columns: 1fr;
-  }
-  .stat-value {
-    font-size: clamp(2.2rem, 9vw, 3.8rem);
   }
 
   .pricing-hero__content {
@@ -1232,13 +1281,21 @@ body {
   .section-index {
     padding-top: 0;
   }
+  .hero-copy {
+    font-size: 1rem;
+  }
+
+  .benchmark-image-slot {
+    aspect-ratio: 3 / 4;
+  }
+
+  .benchmark-image {
+    height: 100%;
+  }
+
   .stat-caption,
   .stat-source,
   .reference-line {
     font-size: 0.92rem;
-  }
-
-  .hero-copy {
-    font-size: 1rem;
   }
 }
