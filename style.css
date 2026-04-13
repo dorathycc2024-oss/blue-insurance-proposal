@@ -1,6 +1,461 @@
-Main
-APP
- — 20:09
+:root {
+  --bg: #f4f8f1;
+  --bg-2: #edf4ea;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: rgba(255, 255, 255, 0.96);
+  --text: #1b221d;
+  --muted: #637064;
+  --line: rgba(27, 34, 29, 0.1);
+  --accent-green: #5d8a68;
+  --accent-dark-green: #31553b;
+  --accent-soft: rgba(93, 138, 104, 0.12);
+  --shadow: 0 28px 90px rgba(23, 30, 25, 0.08);
+  --shadow-strong: 0 26px 80px rgba(20, 27, 22, 0.18);
+  --radius: 30px;
+  --max: 1320px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(93, 138, 104, 0.08), transparent 28%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+  line-height: 1.6;
+}
+.page-aura {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.14;
+}
+
+.site-shell {
+  width: min(calc(100% - 40px), var(--max));
+  margin: 0 auto;
+  padding: 18px 0 80px;
+  position: relative;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 18px 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(18px);
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  display: block;
+  height: 82px;
+  width: auto;
+}
+
+.topnav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.94rem;
+  transition: color 180ms ease;
+}
+.topnav a:hover {
+  color: var(--accent-dark-green);
+}
+
+.hero,
+.section,
+.persona {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow);
+  border-radius: calc(var(--radius) + 4px);
+}
+
+.hero {
+  padding: clamp(64px, 8vw, 110px);
+  min-height: auto;
+}
+
+.hero-briefing {
+  display: grid;
+  gap: 24px;
+}
+
+.hero-heading-block {
+  max-width: 980px;
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 1080px;
+  font-size: clamp(3.1rem, 6vw, 6.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+.hero-copy {
+  max-width: 820px;
+  margin: 22px 0 0;
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+  color: var(--muted);
+}
+
+.hero-core-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.hero-summary-card,
+.hero-unlocks-card,
+.hero-brief-card {
+  border-radius: 26px;
+  border: 1px solid var(--line);
+}
+
+.hero-summary-card {
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.94);
+}
+.hero-summary-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hero-summary-card p + p {
+  margin-top: 18px;
+}
+
+.hero-unlocks-card {
+  padding: 28px;
+  background: linear-gradient(180deg, #223446 0%, #172533 100%);
+  color: rgba(255,255,255,0.95);
+  box-shadow: var(--shadow-strong);
+}
+
+.hero-unlocks-card .benchmark-tag {
+  color: rgba(220, 233, 226, 0.9);
+}
+
+.hero-unlocks-intro {
+  margin: 14px 0 0;
+  color: rgba(241, 247, 243, 0.9);
+  line-height: 1.75;
+}
+
+.hero-unlocks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.hero-unlock-item {
+  padding: 18px 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-unlock-item h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+.hero-unlock-item p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: rgba(229, 238, 232, 0.84);
+}
+
+.hero-brief-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.hero-brief-card {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.hero-brief-card h3 {
+  margin: 10px 0 10px;
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.hero-brief-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.hero-side-label,
+.eyebrow,
+.persona-label,
+.section-index,
+.recommended-badge,
+.benchmark-tag,
+.proposal-kicker,
+.roadmap-phase,
+.mini-label,
+.recommendation-kicker,
+.commercial-card__topline,
+.commercial-recommended-badge {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.76rem;
+}
+.eyebrow,
+.persona-label,
+.section-index,
+.benchmark-tag,
+.roadmap-phase,
+.mini-label,
+.hero-side-label,
+.commercial-card__topline {
+  color: var(--accent-green);
+}
+
+.proposal-kicker,
+.recommendation-kicker,
+.commercial-recommended-badge {
+  color: var(--accent-dark-green);
+}
+.eyebrow,
+.proposal-kicker,
+.persona-label,
+.benchmark-tag,
+.roadmap-phase,
+.mini-label,
+.hero-side-label,
+.recommendation-kicker,
+.commercial-card__topline,
+.commercial-recommended-badge {
+  display: inline-block;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+}
+.proposal-kicker {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 220ms ease, background 220ms ease, border-color 220ms ease, color 220ms ease;
+}
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: var(--text);
+  color: #fff;
+}
+
+.button.secondary {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+}
+.button.secondary:hover {
+  border-color: rgba(93, 138, 104, 0.3);
+  color: var(--accent-dark-green);
+}
+
+.section,
+.persona {
+  padding: clamp(34px, 4vw, 52px);
+  margin-top: 24px;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 64px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-bottom: 32px;
+}
+
+.section-heading.strong-break,
+.section-heading.high-impact-heading {
+  margin-bottom: 38px;
+}
+
+.section-index {
+  padding-top: 10px;
+}
+.section h2,
+.persona h3,
+.recommendation-panel h3,
+.roadmap-header h3,
+.stat-lead-card h3,
+.statistics-proof-card h3,
+.persona-posts h4,
+.preview-profile-card__header h3,
+.preview-why-card h3,
+.next-phase-card h3,
+.delivery-submodule-header h3,
+.commercial-card h3,
+.commercial-intro-card h3,
+.deliverables-hero-card h3,
+.deliverable-tile h3 {
+  margin: 0;
+  font-size: clamp(1.9rem, 2.6vw, 3rem);
+  letter-spacing: -0.035em;
+}
+.persona-posts h4 {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+}
+
+.preview-profile-card__header h3 {
+  font-size: 1.3rem;
+}
+
+.preview-why-card h3,
+.next-phase-card h3,
+.delivery-submodule-header h3,
+.commercial-card h3,
+.commercial-intro-card h3,
+.deliverables-hero-card h3 {
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+}
+
+.deliverable-tile h3 {
+  font-size: 1.18rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.section-heading p,
+.persona-feel,
+.content-card p,
+.pillar-card p,
+.persona-details p,
+.benchmark-card p,
+.roadmap-card p,
+.section-intro-card p,
+.editorial-copy p,
+.recommendation-panel p,
+.statistics-proof-card p,
+.reference-line,
+.commercial-intro-card p,
+.commercial-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+}
+
+.argument-grid,
+.two-col,
+.pillars-grid,
+.detail-grid,
+.benchmark-grid,
+.roadmap-grid,
+.platform-logic-grid,
+.methodology-grid,
+.statistics-hero-grid,
+.statistics-grid,
+.statistics-editorial-grid,
+.persona-profile-grid,
+.social-preview-grid,
+.ig-mockups,
+.preview-stats,
+.measurement-grid,
+.commercial-model-grid,
+.commercial-intro-grid,
+.deliverables-card-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.argument-grid {
+  grid-template-columns: 1.1fr 1fr 1fr;
+}
+
+.research-grid {
+  margin-top: 18px;
+}
+.two-col,
+.pillars-grid,
+.roadmap-grid,
+.platform-logic-grid,
+.methodology-grid,
+.commercial-intro-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.content-card,
+.pillar-card,
+.persona-details,
+.benchmark-card,
+.roadmap-card,
+.section-intro-card,
+.argument-card,
+.platform-card,
+.deliverables-card,
+.pricing-card,
+.strategic-message-card,
+.recommendation-panel,
+.editorial-quote,
+.editorial-copy,
+.reframing-highlight,
+.stat-card,
+.statistics-intro-card,
+.statistics-proof-card,
+.data-notes,
+.persona-posts,
+.persona-image-card,
+.preview-profile-card,
+.preview-why-card,
+.next-phase-card,
+.ig-card,
+.governance-principle-card,
+.measurement-recommendation-card,
+.governance-item,
+.measurement-card,
+.commercial-intro-card,
+.commercial-card,
+.deliverables-hero-card,
+.deliverable-tile {
+  background: var(--surface-strong);
   border: 1px solid var(--line);
   border-radius: 26px;
 }
