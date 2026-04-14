@@ -1642,7 +1642,8 @@ body {
 .timeline-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  padding: 24px;
 }
 
 .timeline-phase {
