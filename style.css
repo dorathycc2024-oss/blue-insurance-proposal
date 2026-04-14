@@ -595,6 +595,168 @@ body {
   background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.94));
 }
 
+/* Persona Tabs */
+.persona-tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.persona-tab-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.74);
+  color: var(--text);
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all 0.22s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+  position: relative;
+}
+
+.persona-tab-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.persona-tab-role {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.persona-tab-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--accent-dark-green);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.persona-tab-btn:hover,
+.persona-tab-btn.active {
+  background: var(--accent-green);
+  color: #fff;
+  border-color: var(--accent-green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(93, 138, 104, 0.2);
+}
+
+.persona-tab-btn.active .persona-tab-role {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.persona-panels {
+  position: relative;
+}
+
+.persona-panel {
+  display: none;
+}
+
+.persona-panel.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.persona-panel-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.persona-panel-image {
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(93, 138, 104, 0.08));
+}
+
+.persona-panel-content {
+  display: grid;
+  gap: 20px;
+}
+
+.persona-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.persona-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.persona-detail-item {
+  display: grid;
+  gap: 6px;
+}
+
+.persona-detail-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.persona-detail-item span {
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.persona-detail-item strong {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.persona-posts {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.persona-posts h4 {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.persona-posts ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.persona-posts li + li {
+  margin-top: 10px;
+}
+
 .persona {
   position: relative;
   overflow: hidden;
@@ -1429,6 +1591,7 @@ body {
   .upgraded-statistics-hero-grid,
   .upgraded-statistics-editorial-grid,
   .persona-profile-grid,
+  .persona-panel-grid,
   .social-preview-grid,
   .delivery-submodule-header,
   .measurement-grid,
@@ -1552,6 +1715,34 @@ body {
 
   .section-index {
     padding-top: 0;
+  }
+
+  .persona-tabs {
+    flex-direction: column;
+  }
+
+  .persona-tab-btn {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+  }
+
+  .persona-tab-role {
+    display: none;
+  }
+
+  .persona-panel-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .persona-feel {
+    text-align: left;
+  }
+
+  .persona-detail-grid {
+    grid-template-columns: 1fr;
   }
 
   .hero-core-grid,

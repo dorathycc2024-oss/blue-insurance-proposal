@@ -409,114 +409,155 @@
           </div>
         </div>
 
-        <article class="persona reveal persona-carmen">
-          <div class="persona-intro">
-            <div>
-              <span class="persona-label">Persona 01</span>
-              <h3>Carmen Lau</h3>
-            </div>
-            <p class="persona-feel">Grounded / Reassuring / Family-adjacent maturity</p>
-          </div>
+        <div class="persona-tabs">
+          <button class="persona-tab-btn active" data-persona="carmen">
+            <span class="persona-tab-name">Carmen Lau</span>
+            <span class="persona-tab-role">Senior HR Director</span>
+          </button>
+          <button class="persona-tab-btn" data-persona="vanessa">
+            <span class="persona-tab-name">Vanessa Leung</span>
+            <span class="persona-tab-role">Brand Consultant</span>
+            <span class="persona-tab-badge">Recommended</span>
+          </button>
+          <button class="persona-tab-btn" data-persona="michelle">
+            <span class="persona-tab-name">Michelle Wong</span>
+            <span class="persona-tab-role">School Principal</span>
+          </button>
+        </div>
 
-          <div class="persona-profile-grid">
-            <div class="persona-image-card">
-              <img src="./assets/persona-Carmen.jpeg" alt="Carmen Lau persona portrait" class="persona-image" />
-            </div>
-
-            <div class="persona-content-stack">
-              <div class="persona-details premium-card">
-                <div class="detail-grid two-up">
-                  <div><span>Age</span><strong>39</strong></div>
-                  <div><span>Role</span><strong>Senior HR Director</strong></div>
-                  <div><span>Positioning</span><strong>A calm, reliable woman whose content world makes protection and planning feel like natural extensions of a well-managed life.</strong></div>
-                  <div><span>Why she fits Blue</span><strong>She gives Blue a credible route into family responsibility, planning maturity, and long-term security.</strong></div>
+        <div class="persona-panels">
+          <!-- Carmen Panel -->
+          <div class="persona-panel active" id="carmen">
+            <div class="persona-panel-grid">
+              <div class="persona-panel-image">
+                <img src="./assets/persona-Carmen.jpeg" alt="Carmen Lau persona portrait" class="persona-image" />
+              </div>
+              <div class="persona-panel-content">
+                <div class="persona-panel-header">
+                  <div>
+                    <span class="persona-label">Persona 01</span>
+                    <h3>Carmen Lau</h3>
+                  </div>
+                  <p class="persona-feel">Grounded / Reassuring / Family-adjacent maturity</p>
+                </div>
+                <div class="persona-detail-grid">
+                  <div class="persona-detail-item">
+                    <span>Age</span>
+                    <strong>39</strong>
+                  </div>
+                  <div class="persona-detail-item">
+                    <span>Role</span>
+                    <strong>Senior HR Director</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Positioning</span>
+                    <strong>A calm, reliable woman whose content world makes protection and planning feel like natural extensions of a well-managed life.</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Why she fits Blue</span>
+                    <strong>She gives Blue a credible route into family responsibility, planning maturity, and long-term security.</strong>
+                  </div>
+                </div>
+                <div class="persona-posts">
+                  <h4>What she would post</h4>
+                  <ul>
+                    <li>Work-life balance and thoughtful routines</li>
+                    <li>Family-stage reflections and responsible planning</li>
+                    <li>Everyday decisions that signal calm maturity</li>
+                  </ul>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="persona-posts premium-card">
-                <h4>What she would post</h4>
-                <ul>
-                  <li>Work-life balance and thoughtful routines</li>
-                  <li>Family-stage reflections and responsible planning</li>
-                  <li>Everyday decisions that signal calm maturity</li>
-                </ul>
+          <!-- Vanessa Panel -->
+          <div class="persona-panel" id="vanessa">
+            <div class="persona-panel-grid">
+              <div class="persona-panel-image">
+                <img src="./assets/persona-Vanessa.png" alt="Vanessa Leung persona portrait" class="persona-image" />
               </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="persona reveal persona-vanessa standout-persona" id="recommended">
-          <div class="recommended-badge">Recommended Direction</div>
-          <div class="persona-intro standout-intro">
-            <div>
-              <span class="persona-label">Persona 02</span>
-              <h3>Vanessa Leung</h3>
-            </div>
-            <p class="persona-feel">Refined / Modern / Independent / Quietly aspirational</p>
-          </div>
-
-          <div class="persona-profile-grid">
-            <div class="persona-image-card">
-              <img src="./assets/persona-Vanessa.png" alt="Vanessa Leung persona portrait" class="persona-image" />
-            </div>
-
-            <div class="persona-content-stack">
-              <div class="persona-details premium-card standout-card">
-                <div class="detail-grid two-up">
-                  <div><span>Age</span><strong>37</strong></div>
-                  <div><span>Role</span><strong>Independent Brand Consultant</strong></div>
-                  <div><span>Positioning</span><strong>A composed, self-directed, future-minded woman whose confidence feels contemporary, intelligent, and socially credible.</strong></div>
-                  <div><span>Why she fits Blue</span><strong>She creates the strongest bridge between adult confidence, social aspiration, and long-term life planning.</strong></div>
+              <div class="persona-panel-content">
+                <div class="persona-panel-header">
+                  <div>
+                    <span class="persona-label">Persona 02</span>
+                    <h3>Vanessa Leung</h3>
+                  </div>
+                  <p class="persona-feel">Refined / Modern / Independent / Quietly aspirational</p>
+                </div>
+                <div class="persona-detail-grid">
+                  <div class="persona-detail-item">
+                    <span>Age</span>
+                    <strong>37</strong>
+                  </div>
+                  <div class="persona-detail-item">
+                    <span>Role</span>
+                    <strong>Independent Brand Consultant</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Positioning</span>
+                    <strong>A composed, self-directed, future-minded woman whose confidence feels contemporary, intelligent, and socially credible.</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Why she fits Blue</span>
+                    <strong>She creates the strongest bridge between adult confidence, social aspiration, and long-term life planning.</strong>
+                  </div>
+                </div>
+                <div class="persona-posts">
+                  <h4>What she would post</h4>
+                  <ul>
+                    <li>Quiet discipline, self-security, and personal standards</li>
+                    <li>Modern routines, confidence, and future-minded choices</li>
+                    <li>Elegant reflections on planning, stability, and independence</li>
+                  </ul>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div class="persona-posts premium-card">
-                <h4>What she would post</h4>
-                <ul>
-                  <li>Quiet discipline, self-security, and personal standards</li>
-                  <li>Modern routines, confidence, and future-minded choices</li>
-                  <li>Elegant reflections on planning, stability, and independence</li>
-                </ul>
+          <!-- Michelle Panel -->
+          <div class="persona-panel" id="michelle">
+            <div class="persona-panel-grid">
+              <div class="persona-panel-image">
+                <img src="./assets/persona-Michelle.png" alt="Michelle Wong persona portrait" class="persona-image" />
               </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="persona reveal persona-michelle">
-          <div class="persona-intro">
-            <div>
-              <span class="persona-label">Persona 03</span>
-              <h3>Michelle Wong</h3>
-            </div>
-            <p class="persona-feel">Thoughtful / Credible / Mentor-like / Advisory</p>
-          </div>
-
-          <div class="persona-profile-grid">
-            <div class="persona-image-card">
-              <img src="./assets/persona-Michelle.png" alt="Michelle Wong persona portrait" class="persona-image" />
-            </div>
-
-            <div class="persona-content-stack">
-              <div class="persona-details premium-card">
-                <div class="detail-grid two-up">
-                  <div><span>Age</span><strong>36</strong></div>
-                  <div><span>Role</span><strong>Secondary School Principal</strong></div>
-                  <div><span>Positioning</span><strong>A more reflective and advisory presence that helps Blue feel credible, mature, and planning-oriented without becoming too formal.</strong></div>
-                  <div><span>Why she fits Blue</span><strong>She supports a more trusted and thoughtful route into long-range planning, stability, and future readiness.</strong></div>
+              <div class="persona-panel-content">
+                <div class="persona-panel-header">
+                  <div>
+                    <span class="persona-label">Persona 03</span>
+                    <h3>Michelle Wong</h3>
+                  </div>
+                  <p class="persona-feel">Thoughtful / Credible / Mentor-like / Advisory</p>
+                </div>
+                <div class="persona-detail-grid">
+                  <div class="persona-detail-item">
+                    <span>Age</span>
+                    <strong>36</strong>
+                  </div>
+                  <div class="persona-detail-item">
+                    <span>Role</span>
+                    <strong>Secondary School Principal</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Positioning</span>
+                    <strong>A more reflective and advisory presence that helps Blue feel credible, mature, and planning-oriented without becoming too formal.</strong>
+                  </div>
+                  <div class="persona-detail-item full-width">
+                    <span>Why she fits Blue</span>
+                    <strong>She supports a more trusted and thoughtful route into long-range planning, stability, and future readiness.</strong>
+                  </div>
+                </div>
+                <div class="persona-posts">
+                  <h4>What she would post</h4>
+                  <ul>
+                    <li>Thoughtful reflections on responsibility and future readiness</li>
+                    <li>Life-stage planning and long-term perspective</li>
+                    <li>Calm, credible guidance framed through lived experience</li>
+                  </ul>
                 </div>
               </div>
-
-              <div class="persona-posts premium-card">
-                <h4>What she would post</h4>
-                <ul>
-                  <li>Thoughtful reflections on responsibility and future readiness</li>
-                  <li>Life-stage planning and long-term perspective</li>
-                  <li>Calm, credible guidance framed through lived experience</li>
-                </ul>
-              </div>
             </div>
           </div>
-        </article>
+        </div>
       </section>
 
       <section class="section reveal social-preview-section">
