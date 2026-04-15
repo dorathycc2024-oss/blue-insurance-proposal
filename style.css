@@ -548,7 +548,114 @@ body {
   letter-spacing: -0.03em;
 }
 
+/* Market Context Data Grid */
+.context-data-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.context-data-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  text-align: center;
+}
+
+.context-data-card .data-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--accent-dark-green);
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.context-data-card .data-caption {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.context-data-card .data-source {
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+/* Market Research Trust Data Grid */
+.trust-data-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.trust-data-card {
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.emphasis-trust-card {
+  background: linear-gradient(180deg, rgba(93, 138, 104, 0.12), rgba(255,255,255,0.94));
+}
+
+.trust-data-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.trust-data-card .data-value {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--accent-dark-green);
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.trust-data-card .data-value-split {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 8px 0;
+}
+
+.trust-data-card .split-label {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.trust-data-card .data-caption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.trust-data-card .trust-source {
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.8;
+  margin-top: 12px;
+}
+
+.case-study-card {
+  background: linear-gradient(180deg, rgba(93, 138, 104, 0.08), rgba(255,255,255,0.94));
+  border-color: rgba(93, 138, 104, 0.18);
+}
+
 .split-editorial {
+
   display: grid;
   grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
   gap: 18px;
@@ -1772,6 +1879,14 @@ body {
     font-size: 1.6rem;
   }
 
+  .context-data-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trust-data-grid {
+    grid-template-columns: 1fr;
+  }
+
   .ig-mockups,
   .deliverables-card-grid,
   .rollout-cards-grid,
@@ -1850,6 +1965,18 @@ body {
 
   .section-index {
     padding-top: 0;
+  }
+
+  .context-data-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .context-data-card .data-value {
+    font-size: 2.2rem;
+  }
+
+  .trust-data-card .data-value {
+    font-size: 2rem;
   }
 
   .persona-tabs {
