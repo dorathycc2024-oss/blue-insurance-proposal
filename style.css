@@ -622,24 +622,16 @@ body {
   margin: 8px 0;
 }
 
-.trust-data-card .data-value-split {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--text);
-  margin: 8px 0;
-}
-
-.trust-data-card .split-label {
-  font-size: 0.85rem;
-  font-weight: 400;
-  color: var(--muted);
-}
-
 .trust-data-card .data-caption {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.5;
   margin: 0;
+}
+
+.trust-data-card .data-caption strong {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .trust-data-card .trust-source {
